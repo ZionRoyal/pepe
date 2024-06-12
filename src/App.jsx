@@ -23,21 +23,13 @@ useEffect(() => {
   };
 }, []);
   
- useEffect(() => {
-   // Fade in effect for the first h1 element on initial page load
-   const firstH1 = elements.current[0];
-   if (firstH1) {
-     firstH1.style.opacity = 1;
-     firstH1.style.transition = "opacity 1s";
-   }
- }, []);
   return (
     <>
       <div className="section1 container mx-auto">
         <div className="container flex justify-center items-center pt-[5rem]">
           <h1
             className="font-custom text-black w-[30%] text-justify uppercase text-sm  mb-10 font-bold"
-            ref={(el) => (elements.current[0] = el)}
+           
           >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, sit!
             Autem sapiente nesciunt facilis asperiores illum ullam quas iusto
