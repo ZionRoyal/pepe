@@ -20,7 +20,7 @@ function App() {
         </div>
         <div className="right-0 justify-evenly flex">
           <h1 className="font-custom bg-green-400 w-[300px] text-[25px] rounded-md p-10 mt-20">
-            TAX 0/0
+            TAX 0/0wqw
           </h1>
         </div>
       </div>
