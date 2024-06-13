@@ -1,36 +1,71 @@
 import { useRef } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
+import fore from "./assets/1.png";
+import back from "./assets/2.jpg";
+import { ParallaxBanner } from "react-scroll-parallax";
 
 function App() {
-const elements = useRef([]);
+  const elements = useRef([]);
+  useEffect(() => {
+    const handleScroll = () => {
+      elements.current.forEach((element, index) => {
+        const top = element.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        if (top < windowHeight) {
+          element.style.opacity = 1;
+          element.style.transform = "translateX(0)";
+        }
+      });
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
-useEffect(() => {
-  const handleScroll = () => {
-    elements.current.forEach((element, index) => {
-      const top = element.getBoundingClientRect().top;
-      const windowHeight = window.innerHeight;
-      if (top < windowHeight) {
-        element.style.opacity = 1;
-        element.style.transform = "translateX(0)";
-      }
-    });
-  };
-
-  window.addEventListener("scroll", handleScroll);
-  return () => {
-    window.removeEventListener("scroll", handleScroll);
-  };
-}, []);
-  
   return (
     <>
       <div className="section1 container mx-auto">
+        <ParallaxBanner
+          layers={[
+            { image: "/src/assets/2.jpg", speed: -25 },
+            { image: "/src/assets/1.png", speed: -10 },
+          ]}
+          style={{
+            height: "900px",
+          }}
+          className="aspect-[2/1]"
+        >
+          <div className="absolute inset-0 flex items-center justify-end">
+            <h1
+              className="text-8xl font-bold text-white text-stroke"
+            >
+              Willkome
+            </h1>
+          </div>
+        </ParallaxBanner>
+        <div>
+          <div class="keyart" id="parallax">
+            <div
+              class="keyart_layer parallax"
+              id="keyart-0"
+              data-speed="2"
+            ></div>
+            <div
+              class="keyart_layer parallax"
+              id="keyart-1"
+              data-speed="5"
+            ></div>
+            <div
+              class="keyart_layer parallax"
+              id="keyart-2"
+              data-speed="11"
+            ></div>
+          </div>
+        </div>
         <div className="container flex justify-center items-center pt-[5rem]">
-          <h1
-            className="font-custom text-black w-[30%] text-justify uppercase text-sm  mb-10 font-bold"
-           
-          >
+          <h1  className="font-custom text-black w-[30%] text-justify uppercase text-sm  mb-10 font-bold">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, sit!
             Autem sapiente nesciunt facilis asperiores illum ullam quas iusto
             dolorum quaerat, odio labore quo minima nihil. Earum asperiores
