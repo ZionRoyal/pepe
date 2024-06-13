@@ -57,9 +57,14 @@ function App() {
           <img src="/sun.png" alt="" />
         </Parallax>
       </div>
-      <div className="section1 container mx-auto">
+      <div className="section1 container mx-auto justify-center items-center relative">
+        <img
+          src="/title.png"
+          alt="title"
+          className="absolute w-[40rem] right-[55%] -rotate-6 -mt-20"
+        />
         <div className="container flex justify-center items-center pt-[5rem]">
-          <h1 className="font-custom text-black w-[30%] text-justify uppercase text-sm  mb-10 font-bold">
+          <h1 className="font-custom text-black w-[35%] text-left uppercase text-xl -rotate-6  mb-10 font-bold">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, sit!
             Autem sapiente nesciunt facilis asperiores illum ullam quas iusto
             dolorum quaerat, odio labore quo minima nihil. Earum asperiores
@@ -68,8 +73,23 @@ function App() {
             eveniet eaque dolorem quaerat eius ipsam amet, numquam sequi ea, cum
             magni esse provident quam?
           </h1>
+          <img
+            src="/pepe.png"
+            alt="pepe"
+            className="absolute right-60 w-96 -rotate-6 top-10"
+          />
         </div>
-        <div className="font-custom flex justify-center  space-x-48">
+        <Parallax speed={-10}>
+          <div className="absolute flex bottom-2">
+            <img src="/cld.png" alt="cloud" className="w-60" />
+          </div>
+        </Parallax>
+        <Parallax speed={10}>
+          <div className="absolute flex -top-2 right-0">
+            <img src="/cld.png" alt="cloud" className="w-60" />
+          </div>
+        </Parallax>
+        <div className="font-custom flex justify-center -rotate-6 space-x-48">
           <a
             href="https://x.com/popo_on_base?s=21&t=e4VJ7rcZVtvmps9KT5k2Vw"
             className="bg-yellow-500 border-[2px] font-extrabold border-black px-6 py-1 rounded-full hover:bg-green-900 hover:text-white"
@@ -84,9 +104,10 @@ function App() {
           </a>
         </div>
       </div>
-      <div className="section2 container justify-center items-center mx-auto flex mt-20 ">
-        <div className="flex justify-center items-center mx-auto">
-          <h1 className="font-custom uppercase w-[30%] text-justify ">
+      <div className="section2 container justify-center items-center mx-auto flex mt-40 ">
+        <div className="flex flex-col justify-center items-center mx-auto">
+          <img src="/title.png" alt="title" className="w-[40rem] " />
+          <h1 className="font-custom uppercase w-[40%] text-left text-xl ">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate
             nostrum itaque iste nobis modi ipsa tenetur aliquam. Maiores
             assumenda vitae distinctio quia qui ad velit asperiores recusandae!
@@ -95,6 +116,9 @@ function App() {
             pariatur beatae, ea veniam animi dignissimos odit, ducimus,
             assumenda tempora minus quibusdam modi magni reprehenderit laborum.
           </h1>
+          <div className="flex">
+            <img src="/meme.jpg" alt="meme" />
+          </div>
         </div>
       </div>
       <div className="section3 flex flex-col items-center space-y-2 justify-center mt-20 font-custom">
