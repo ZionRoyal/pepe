@@ -84,8 +84,8 @@ function App() {
           </a>
         </div>
       </div>
-      <div className="section2 container mt-20 ">
-        <div className="flex justify-center">
+      <div className="section2 container justify-center items-center mx-auto flex mt-20 ">
+        <div className="flex justify-center items-center mx-auto">
           <h1 className="font-custom uppercase w-[30%] text-justify ">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate
             nostrum itaque iste nobis modi ipsa tenetur aliquam. Maiores
