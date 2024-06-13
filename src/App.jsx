@@ -29,8 +29,8 @@ function App() {
       <div className="section1 container mx-auto">
         <ParallaxBanner
           layers={[
-            { image: "/src/assets/2.jpg", speed: -25 },
-            { image: "/src/assets/1.png", speed: -10 },
+            { image: "/public/2.jpg", speed: -25 },
+            { image: "/public/1.png", speed: -10 },
           ]}
           style={{
             height: "900px",
@@ -38,9 +38,7 @@ function App() {
           className="aspect-[2/1]"
         >
           <div className="absolute inset-0 flex items-center justify-end">
-            <h1
-              className="text-8xl font-bold text-white text-stroke"
-            >
+            <h1 className="text-8xl font-bold text-white text-stroke">
               Willkome
             </h1>
           </div>
@@ -65,7 +63,7 @@ function App() {
           </div>
         </div>
         <div className="container flex justify-center items-center pt-[5rem]">
-          <h1  className="font-custom text-black w-[30%] text-justify uppercase text-sm  mb-10 font-bold">
+          <h1 className="font-custom text-black w-[30%] text-justify uppercase text-sm  mb-10 font-bold">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, sit!
             Autem sapiente nesciunt facilis asperiores illum ullam quas iusto
             dolorum quaerat, odio labore quo minima nihil. Earum asperiores
