@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import fore from "./assets/1.png";
 import back from "./assets/2.jpg";
-import { ParallaxBanner } from "react-scroll-parallax";
+import { Parallax, ParallaxBanner } from "react-scroll-parallax";
 
 function App() {
   const elements = useRef([]);
@@ -29,7 +29,7 @@ function App() {
       <div className="section1 container mx-auto">
         <ParallaxBanner
           layers={[
-            { image: "/2.jpg", speed: -25 },
+            { image: "/2.jpg", speed: -35 },
             { image: "/1.png", speed: -10 },
           ]}
           style={{
@@ -43,6 +43,21 @@ function App() {
             </h1>
           </div>
         </ParallaxBanner>
+        <div className="justify-end items-center">
+          <Parallax speed={-15} className="absolute w-48 -top-14 right-0">
+            <img src="/cloud.png" alt="" />
+          </Parallax>
+        </div>
+        <div className="justify-end items-center">
+          <Parallax speed={-19} className="absolute w-48 -top-20 right-80">
+            <img src="/cloud.png" alt="" />
+          </Parallax>
+        </div>
+        <div className="justify-end items-center rounded-full">
+          <Parallax speed={-21} className="absolute w-60 top-72  right-[25rem]">
+            <img src="/sun.png" alt="" />
+          </Parallax>
+        </div>
         <div>
           <div class="keyart" id="parallax">
             <div
