@@ -26,57 +26,38 @@ function App() {
 
   return (
     <>
+      <ParallaxBanner
+        layers={[
+          { image: "/2.jpg", speed: -35 },
+          { image: "/1.png", speed: -10 },
+        ]}
+        style={{
+          height: "900px",
+        }}
+        className="aspect-[2/1]"
+      >
+        <div className="absolute inset-0 flex items-center justify-end">
+          <h1 className="text-8xl font-bold text-white text-stroke">
+            Willkome
+          </h1>
+        </div>
+      </ParallaxBanner>
+      <div className="justify-end items-center">
+        <Parallax speed={-15} className="absolute w-48 -top-14 right-0">
+          <img src="/cloud.png" alt="" />
+        </Parallax>
+      </div>
+      <div className="justify-end items-center">
+        <Parallax speed={-19} className="absolute w-48 -top-20 right-80">
+          <img src="/cloud.png" alt="" />
+        </Parallax>
+      </div>
+      <div className="justify-end items-center rounded-full">
+        <Parallax speed={-21} className="absolute w-60 top-72  right-[25rem]">
+          <img src="/sun.png" alt="" />
+        </Parallax>
+      </div>
       <div className="section1 container mx-auto">
-        <ParallaxBanner
-          layers={[
-            { image: "/2.jpg", speed: -35 },
-            { image: "/1.png", speed: -10 },
-          ]}
-          style={{
-            height: "900px",
-          }}
-          className="aspect-[2/1]"
-        >
-          <div className="absolute inset-0 flex items-center justify-end">
-            <h1 className="text-8xl font-bold text-white text-stroke">
-              Willkome
-            </h1>
-          </div>
-        </ParallaxBanner>
-        <div className="justify-end items-center">
-          <Parallax speed={-15} className="absolute w-48 -top-14 right-0">
-            <img src="/cloud.png" alt="" />
-          </Parallax>
-        </div>
-        <div className="justify-end items-center">
-          <Parallax speed={-19} className="absolute w-48 -top-20 right-80">
-            <img src="/cloud.png" alt="" />
-          </Parallax>
-        </div>
-        <div className="justify-end items-center rounded-full">
-          <Parallax speed={-21} className="absolute w-60 top-72  right-[25rem]">
-            <img src="/sun.png" alt="" />
-          </Parallax>
-        </div>
-        <div>
-          <div class="keyart" id="parallax">
-            <div
-              class="keyart_layer parallax"
-              id="keyart-0"
-              data-speed="2"
-            ></div>
-            <div
-              class="keyart_layer parallax"
-              id="keyart-1"
-              data-speed="5"
-            ></div>
-            <div
-              class="keyart_layer parallax"
-              id="keyart-2"
-              data-speed="11"
-            ></div>
-          </div>
-        </div>
         <div className="container flex justify-center items-center pt-[5rem]">
           <h1 className="font-custom text-black w-[30%] text-justify uppercase text-sm  mb-10 font-bold">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, sit!
