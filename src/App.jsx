@@ -29,8 +29,8 @@ function App() {
       <div className="section1 container mx-auto">
         <ParallaxBanner
           layers={[
-            { image: "/public/2.jpg", speed: -25 },
-            { image: "/public/1.png", speed: -10 },
+            { image: "/2.jpg", speed: -25 },
+            { image: "/1.png", speed: -10 },
           ]}
           style={{
             height: "900px",
